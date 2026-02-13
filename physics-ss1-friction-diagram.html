@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Inclined Plane Diagram</title>
+</head>
+<body>
+
+<h2 style="text-align:center;">Inclined Plane (Worked Example)</h2>
+
+<svg width="400" height="250" style="border:1px solid #ccc; display:block; margin:auto;">
+
+  <!-- Ground -->
+  <line x1="50" y1="200" x2="350" y2="200" stroke="black" stroke-width="3" />
+
+  <!-- Inclined plane -->
+  <line x1="100" y1="200" x2="300" y2="120" stroke="black" stroke-width="3" />
+
+  <!-- Angle arc -->
+  <path d="M120 200 A30 30 0 0 1 140 190" stroke="black" fill="none"/>
+  <text x="130" y="210">30°</text>
+
+  <!-- Block -->
+  <rect x="210" y="110" width="50" height="30"
+        transform="rotate(-22 210 110)"
+        fill="white" stroke="black" stroke-width="2"/>
+
+  <!-- Mass label -->
+  <text x="215" y="130">5 kg</text>
+
+</svg>
+
+</body>
+</html>

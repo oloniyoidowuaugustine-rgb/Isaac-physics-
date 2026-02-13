@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Physics ss1, density and relative density </title>
+<style>
+body { font-family: Arial; background:#f4f6f8; margin:0; padding:20px; }
+h1 { text-align:center; color:#023e8a; margin-bottom:20px; }
+.content { max-width:800px; margin:auto; background:#e3f2fd; padding:20px; border-radius:10px; }
+button { background-color:#0288d1; color:white; border:none; padding:10px 20px; margin-top:15px; border-radius:8px; cursor:pointer; font-weight:bold; transition:0.3s; }
+button:hover { background-color:#0277bd; }
+</style>
+</head>
+<body>
+
+<h1>Density and Relative density</h1>
+
+<div class="content">
+  <p><strong>Definition of Density:Density of a substance is defined as the mass of the substance per unit volume.It is denoted by p and it is a scaler quantity</strong> </p>
+  <p><strong>Formula for density: Density=Mass/Volume (measured in kgm-3(kg/m³))</strong> </p>
+  <p>The S.I unit of density is gcm-3(g/cm³)</p>
+  <p><strong>NB:<ul>(i) volume=cross sectional area×height</ul><ul>(ii)Cross sectional area=Length×breadth</ul>
+  <ul>(iii)volume=Length× breadth</ul>
+  <ul>Thus:m=pv=pAh</ul></strong></p>
+  <p><strong>Definition of Relative density:Relative density is the density of a water compared with the density of other substance</strong> </p>
+  <p><strong>Formula for Relative density:<li>Relative density=Density of substance/Density of water</li>
+  <li>Relative density=mass of substance/mass of equal volume of water</li>
+  <li>Relative density=Weight of substances/weight of equal volume of substance</li></strong> </p>
+  <p><strong>Example: Determine the mass of an aluminum whose density is 2700kg/m³, if the volume of the aluminum is 0.08 m³</strong> </p>
+  <p><strong>Solution
+  <li>mass=?</li>
+  <li>volume=0.08m³</li>
+  <li>Density=2700kg/m³</li>
+  <ul>Density=mass/volume</ul>
+  <ul>2700=mass/0.08</ul></strong></p>
+  <ul>mass=0.08×2700=216kg</ul>
+  <p><strong>Example II: what is the height of a cylinderical iron if the density is 7900kg/m³? The mass is 700kg and the radius is 0.1m(π=22/7)
+  <ul>Solution</ul>
+  <ul>Density=mass/volume</ul>
+  <ul>volume=mass/density=volumeπr²h</ul>
+  <ul>πr²h=mass/density </ul>
+ <ul> h=mass/density×πr²</ul>
+ <ul>h=700/7900×22/7×(0.1)²</ul>
+ <ul>700/248.286</ul>
+ <ul>2.819m</ul>
+  </strong></p>
+  
+  <button onclick="downloadNote()">Download Notes</button>
+</div>
+
+<script>
+function downloadNote(){
+  const text = `
+Speed, Velocity & Acceleration
+
+1. Definition of Speed: …
+2. Formula for Speed: …
+3. Definition of Velocity: …
+4. Acceleration: …
+5. Example: …
+  `;
+  const blob = new Blob([text], { type: 'text/plain' });
+  const link = document.createElement('a');
+  link.href = URL.createObjectURL(blob);
+  link.download = 'Physics-SS1-Speed.txt';
+  link.click();
+}
+</script>
+
+</body>
+</html>

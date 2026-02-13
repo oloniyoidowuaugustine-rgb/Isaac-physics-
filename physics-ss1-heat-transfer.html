@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Physics Note- Mode of heat transfer</title>
+<style>
+body { font-family: Arial; background:#f4f6f8; margin:0; padding:20px; }
+h1 { text-align:center; color:#023e8a; margin-bottom:20px; }
+.content { max-width:800px; margin:auto; background:#e3f2fd; padding:20px; border-radius:10px; }
+button { background-color:#0288d1; color:white; border:none; padding:10px 20px; margin-top:15px; border-radius:8px; cursor:pointer; font-weight:bold; transition:0.3s; }
+button:hover { background-color:#0277bd; }
+</style>
+</head>
+<body>
+
+<h1>Mode of heat transfer</h1>
+
+<div class="content">
+  <p><strong>Heat can be transferred from one place to another in three media. These are solid, liquid and gas.process of heat transfer in each medium are conduction, convention and radiation</strong> </p>
+  <h3><strong>Conduction </strong></h3>
+  <p><strong>Conduction is the transfer of heat through material from one place to another, by the vibration or motion of the molecules of the material</strong> </p>
+  <h3><strong>Insulator and Conductor s</h3><p>Insulators are material that do not all electric charge to pass through them example papers, stone etc.
+  <ul>Conductors are material that allows electric charge to pass through them examples copper, gold, iron etc.</ul></strong></p>
+  <h3><strong>Convention <strong></strong></h3>
+  <p><strong>Convention is the transfer of  fluid e.g gas and liquid. It is the process by which heat energy is transferred in fluid by the actual movement of the heated fluid</strong> </p>
+  <h3><strong>Radiation </strong></h3>
+  <p><strong>Radiation is the transfer of heat from one point to another without heating the intervening medium. Radiation gives off a form of energy which is called radient energy.</strong> </p>
+  
+  
+  <button onclick="downloadNote()">Download Notes</button>
+</div>
+
+<script>
+function downloadNote(){
+  const text = `
+Speed, Velocity & Acceleration
+
+1. Definition of Speed: …
+2. Formula for Speed: …
+3. Definition of Velocity: …
+4. Acceleration: …
+5. Example: …
+  `;
+  const blob = new Blob([text], { type: 'text/plain' });
+  const link = document.createElement('a');
+  link.href = URL.createObjectURL(blob);
+  link.download = 'Physics-SS1-Speed.txt';
+  link.click();
+}
+</script>
+
+</body>
+</html>

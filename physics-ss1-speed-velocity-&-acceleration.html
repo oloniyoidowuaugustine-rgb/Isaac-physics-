@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Physics Notes - Speed Velocity & Acceleration</title>
+<style>
+body { font-family: Arial; background:#f4f6f8; margin:0; padding:20px; }
+h1 { text-align:center; color:#023e8a; margin-bottom:20px; }
+.content { max-width:800px; margin:auto; background:#e3f2fd; padding:20px; border-radius:10px; }
+button { background-color:#0288d1; color:white; border:none; padding:10px 20px; margin-top:15px; border-radius:8px; cursor:pointer; font-weight:bold; transition:0.3s; }
+button:hover { background-color:#0277bd; }
+</style>
+</head>
+<body>
+
+<h1>Speed Velocity & Acceleration</h1>
+
+<div class="content">
+  <p><strong>Definition of Speed:Speed is defined as the rate of change of distance moved in an unspecific direction. It is a scalar quantity</strong> </p>
+  <p><strong>Formula for Speed:Speed=Distance moved/Time</strong> </p>
+  <p><strong>Average speed: is the ratio of the total distance travelled to the total time taken</strong></p>
+  <p><strong>average speed=Total distance travelled/Total time taken</strong></p>
+  <p><strong>Definition of Velocity: Velocity is the rate of change of distance moved in a specific directions</strong> </p>
+  <p><strong>Velocity=Displacement/Time</strong></p>
+  <p><strong>similarities between speed and velocity 
+<li>Both are used in the measurement of distance</li>
+<li>Both are measured in m/s or ms–¹</li></strong></p>
+<p><strong>Example: A car travelled a distance of 4km in 40sec. Find the speed in metre per seconds</strong></p>
+<p><strong>solution </strong></p>
+<p><strong>The km is converted to m</strong></p>
+<p><strong>1000m=1km</strong></p>
+<p><strong>Thus:4×1000=4000m</strong></p>
+<p><strong>speed=Distance/Time</strong></p>
+<p><strong>speed=4000/40 =100m/s</strong></p>
+  <p><strong>Linear Acceleration: linear acceleration is the rate of increase of velocity with time.If the velocity decrease with time it is called <i>retardation</i></strong> </p>
+  <p><strong>Uniform acceleration: A body is said to  undergo uniform acceleration, if the increasing rate of the change of velocity is constant,no matter how small the time interval may be</strong></p>
+  <p><strong>Equation of motion 
+<li>v=u+at</li>
+<li>s=u+v/2</li>
+<li>s=ut+½at²</li>
+<li>v²=u²+2as</li>
+<li></li></strong></p>
+  <p><strong>Example: A motor car starting from a rest is accelerated uniformly to a velocity of 100.8km/h. A break is applied in 4sec. calculate its  acceleration and retardation from km/h to m/s </strong> </p>
+  <p><strong>solution
+  <ul>Convert 100.8km/h to m/s</ul>
+  <ul>100.8×1000/60×60</ul>
+  <ul>28m/s</ul>
+  <ul>u= initial velocity=0</ul>
+  <ul>v=final velocity=28m/s</ul>
+  <ul>time=4secs</ul>
+  <ul>a=v-u/t</ul>
+  <ul>28/4= a=7m/s²</ul>
+  <ul>change in velocity=0-28=-28</ul>
+  <ul>Retardation=velocity/Time= change in velocity/Time=u-a/t</ul>
+  <ul>-28/4</ul>
+  <ul>R=-7m/s²</ul></strong></p>
+  
+  <button onclick="downloadNote()">Download Notes</button>
+</div>
+
+<script>
+function downloadNote(){
+  const text = `
+Speed Velocity & Acceleration
+
+1. Definition of Speed: …
+2. Formula for Speed: …
+3. Definition of Velocity: …
+4. Acceleration: …
+5. Example: …
+  `;
+  const blob = new Blob([text], { type: 'text/plain' });
+  const link = document.createElement('a');
+  link.href = URL.createObjectURL(blob);
+  link.download = 'Physics-SS1-Speed.txt';
+  link.click();
+}
+</script>
+
+</body>
+</html>

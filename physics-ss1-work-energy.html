@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Physics Notes - Work, Energy and power</title>
+<style>
+body { font-family: Arial; background:#f4f6f8; margin:0; padding:20px; }
+h1 { text-align:center; color:#023e8a; margin-bottom:20px; }
+.content { max-width:800px; margin:auto; background:#e3f2fd; padding:20px; border-radius:10px; }
+button { background-color:#0288d1; color:white; border:none; padding:10px 20px; margin-top:15px; border-radius:8px; cursor:pointer; font-weight:bold; transition:0.3s; }
+button:hover { background-color:#0277bd; }
+</style>
+</head>
+<body>
+
+<h1>Work, Energy and Power</h1>
+
+<div class="content">
+  <h2><strong>Work</strong></h2>
+  <p><strong>Definition of work:Work is defined as the product of force and perpendicular distance in the direction of the applied force.It is denoted by w, measured in joules (j) and a scaler quantity.
+  <ul>Thus, work =force×distance</ul>
+  <ul>W=F×S</ul>
+  <ul>since f=ma, W=F×S=ma×s</ul></strong> </p>
+  <p><strong>Example:A constant force of 40N acting on a body initially at rest give it an acceleration of 0.1m/s² for 4sec. calculate the work done by the force.
+ <ul>solution </ul>
+ <ul>U=0, a=0.1m/s²,  t=4s,  F=40N</ul>
+ <ul>S=ut+½at²<i>(from motion equation)</i></ul>
+ <ul>0×t+½×0.1×4²</ul>
+ <ul>S=0.8m</ul>
+ <ul>w=f×s</ul>
+ <ul>w=40×0.8</ul>
+ <ul>w=32j</ul></strong> </p>
+ <h3><strong>Energy</strong></h3>
+  <p><strong>Definition of energy:Energy is the ability or capacity to do work. It is denoted by E, measured in joules (j) and a scaler quantity</strong> </p>
+  <h2><strong>Forms of Energy </strong></h2>
+  <p><strong>
+    <li>mechanical energy</li>
+    <li>electrical energy </li>
+    <li>solar or light energy </li>
+ <li>nuclear/atomic energy</li>
+ <li>sound energy</li>
+ <li>chemical energy</li>
+ <li>heat energy</li></strong></p>
+  <p><strong>Conservation of energy:The principle of conservation of energy state that in a closed system, energy can neither be created nor destroyed during a transformation, though energy can be transformed so that the total energy of a given system remain constant</strong> </p>
+  <h3><strong>Mechanical Energy </strong></h3>
+  <p><strong>Mechanical energy is a form of energy which is generally used in our daily activities by individual and object. There are two types of mechanical energy:
+  <li>kinetic energy (KE):It is defined as the energy due to the motion. it is denoted by K.E, measured in joules and it's a scaler quantity</li></strong></p>
+  <p><strong>Example:A body of mass 4kg is acted upon by a constant force of 12N for 2sec. calculate the K.E gained by the body
+  <ul>solution</ul>
+  <ul>u=0, f=12N,  m=4kg,  t=2sec</ul>
+  <ul>K.E=½mv²(we have to find fo v)</ul>
+  <ul>F=ma</ul>
+  <ul>a=12/4 =3m/s</ul>
+  <ul>v=u+at</ul>
+  <ul>v=0+3×2=6</ul>
+  <ul>K.E=½×4×6²=72j</ul>
+  <li>Potential Energy: potential energy is defined as the energy at rest due to its level or position above the earth surface, it is denoted by P.E, measured in joules and a scaler quantity</strong></p>
+  <ul>P.E=mgh</ul></li>
+  <p><strong>Example: A fruit from a tree of mass 2kg is 5m above the ground. calculate the P.E of the fruit above the ground {g=10m/s}
+  <ul>Solution </ul>
+  <ul>P.E=mgh</ul>
+  <ul>2×10×5=100j</ul>
+  </strong> </p>
+  <h3><strong>Power </strong></h3>
+  <p><strong>power is the rate of work done or the rate at which energy is expanded.It is denoted by P, measured in watts (w)-S.I units, J/s or Nm/s</strong></p>
+  <p><strong>Formula for power
+  <li>power=workdone/time</li>
+  <li>P=F×S/t</li>
+  <li>P=F×S/t</li>
+  <li>Thus, 1 watt (1 j/s) is defined as the unit of work done by one object (1 j) in one second</li></strong></p>
+  <p><strong>Example:A spraying pump is used to spray water  from a pool to a fountain. (i) Determine the power of the pump  when the work done by the pump is 800Nm at 50m/s to a distance of 20m(ii) Determine the mass of the pump when the water is projected at acceleration of 10m/s
+  <ul>solution</ul>
+  <ul>v=50m/s,  w=800Nm,  s=20m, U=0</ul>
+  <li>s=(v+u/2)t</li>
+  <ul>20=50t/2 </ul>
+  <ul>20=25t</ul>
+  <ul>divide both side by 25</ul>
+  <ul>t=20/25</ul>
+  <ul>t=0.8sec</ul>
+  <ul>power=work done/time</ul>
+  <ul>800/0.8</ul>
+  <ul>p=1000w(to convert watt to kilowatt we divide by 100)</ul>
+  <ul>p=1000/1000</ul>
+  <ul>power=1kw</ul>
+  <li>p=F×v</li>
+  <ul>1000=F×50</ul>
+  <ul>F=1000/50</ul>
+  <ul>F=200N</ul>
+  <ul>F=ma</ul>
+  <ul>200=10m</ul>
+  <ul>20kg</ul></strong></p>
+  
+  <button onclick="downloadNote()">Download Notes</button>
+</div>
+
+<script>
+function downloadNote(){
+  const text = `
+Speed, Velocity & Acceleration
+
+1. Definition of Speed: …
+2. Formula for Speed: …
+3. Definition of Velocity: …
+4. Acceleration: …
+5. Example: …
+  `;
+  const blob = new Blob([text], { type: 'text/plain' });
+  const link = document.createElement('a');
+  link.href = URL.createObjectURL(blob);
+  link.download = 'Physics-SS1-Speed.txt';
+  link.click();
+}
+</script>
+
+</body>
+</html> 

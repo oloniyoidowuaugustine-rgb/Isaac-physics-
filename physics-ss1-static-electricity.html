@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Electric charge and Electrostatic induction</title>
+<style>
+body { font-family: Arial; background:#f4f6f8; margin:0; padding:20px; }
+h1 { text-align:center; color:#023e8a; margin-bottom:20px; }
+.content { max-width:800px; margin:auto; background:#e3f2fd; padding:20px; border-radius:10px; }
+button { background-color:#0288d1; color:white; border:none; padding:10px 20px; margin-top:15px; border-radius:8px; cursor:pointer; font-weight:bold; transition:0.3s; }
+button:hover { background-color:#0277bd; }
+</style>
+</head>
+<body>
+
+<h1>Electric charge and Electrostatic induction</h1>
+
+<div class="content">
+  <h3><strong>Electrostatic Induction </strong></h3>
+  <p><strong>Electrostatic induction is the process of charging a body by introducing a charged body to a neutral body. when this is done, the body is said to be </strong><i>induced with a charge</i> </p>
+  <h3>Gold-leaf Electroscope</h3>
+  <p><strong>Gold leaf electroscope is an instrument for measuring, indicating and detecting charges.</strong> </p>
+  <h3>Capacitor</h3>
+  <p><strong>A capacitor is a device for storing electric charge.</strong> </p>
+  <h3>Arrangements of a Capacitor </h3>
+  <p><strong>A capacitor is areanged in series or in a parallel arrangements</strong> </p>
+  <h3>Capacitor in parallel arrangements </h3>
+  <p><strong>C=C1+C2+C3+............+Cn
+  <ul>Hence, the capacitance of a capacitor connected in parallel is the sum of their individual capacitance</ul></strong> </p>
+  <h3>Capacitor in series arrangement</h3>
+  <p><strong>¹/C=¹/C1+¹/C2+¹/C3+......¹/Cn
+  <ul>Hence, the capacitance of a capacitor connected in series is the sum of their reciprocal</ul></strong></p>
+  <h3>Capacitance </h3>
+  <p><strong>The capacitance of a capacitor is defined as the ratio of electric charge to the potential difference between or across the plate of the capacitor. It is denoted by X, measured in farad(f) and a scaler quantity.</strong></p>
+  <p>C=Ae/d
+  <ul>A=Area of plate</ul>
+  <ul>distance apart</ul>
+  <ul>e=permittivity of medium </ul></p>
+  <p>Example:Two capacitor of capacitance, 3uF and 6uF are connected in series. calculate the equivalent capacitance 
+  <ul>solution</ul>
+  <ul>¹/C=¹/C1+¹/C2</ul>
+  <ul>=⅓+⅙</ul>
+  <ul>C=3×6/3+6</ul>
+  <ul>c=18/9</ul>
+  <ul>C=9</ul></p>
+  
+  <button onclick="downloadNote()">Download Notes</button>
+</div>
+
+<script>
+function downloadNote(){
+  const text = `
+Speed, Velocity & Acceleration
+
+1. Definition of Speed: …
+2. Formula for Speed: …
+3. Definition of Velocity: …
+4. Acceleration: …
+5. Example: …
+  `;
+  const blob = new Blob([text], { type: 'text/plain' });
+  const link = document.createElement('a');
+  link.href = URL.createObjectURL(blob);
+  link.download = 'Physics-SS1-Speed.txt';
+  link.click();
+}
+</script>
+
+</body>
+</html>

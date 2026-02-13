@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Physics Notes - Heat and Temperature </title>
+<style>
+body { font-family: Arial; background:#f4f6f8; margin:0; padding:20px; }
+h1 { text-align:center; color:#023e8a; margin-bottom:20px; }
+.content { max-width:800px; margin:auto; background:#e3f2fd; padding:20px; border-radius:10px; }
+button { background-color:#0288d1; color:white; border:none; padding:10px 20px; margin-top:15px; border-radius:8px; cursor:pointer; font-weight:bold; transition:0.3s; }
+button:hover { background-color:#0277bd; }
+</style>
+</head>
+<body>
+
+<h1>Heat and Temperature</h1>
+
+<div class="content">
+  <h3>Heat</h3>
+  <p><strong>Definition of Heat:Heat is the total internal energy of a body which can be transferred from one place to another.Heat depends on temperature difference. Heat is measured in joules and it is named after Prescott joules (1819-1889)</strong> </p>
+  <h2>Temperature </h2>
+  <p><strong>Meaning of temperature: Temperature is the degree of hotness or coldness of a body</strong> </p>
+  <h3>Measurement of Temperature </h3>
+  <p><strong>The unit of measurement of temperature are fahrenhei, Celcius and Ranke named after Gabriel Daniel Fahrenheit, Anders Celcius and Augustus Ranke of Poland respectively. Temperature is measured using Thermometer. The first thermometer was constucted by celcius and it was called centigrade scale. The scale has two fixed point, the upper fixed point and the lower fixed point.</strong> </p>
+  <p><strong>A thermometer must possess this following qualities 
+  <li>Construction: A thermometer must posses certain properties before it is used. In a mecury thermometer, the thermometer must contain a mecury which expand as a result of increase in temperature. The mecury in the thermometer is called</li>
+</strong> <i>thermometric substance</i><strong>
+  <li>Calibration:A thermometer must be well calibrated, starting with two reference point.The  calibration must be made with a shiny ink that can be viewed</li>
+  <li>Sensitivity:A thermometer is said to be sensitive if (i) it can detect small change in temperature (ii)it show the temperature of a body in a short time(iii)it does not absorb large amount of heat for its own heating or cooling from the body whose temperature is measured </li>
+</strong></p>
+<h3>Type of Thermometer </h3>
+  <p><strong>
+    <li>(i)constant volume gas: tp=P∅-Po/P100-Po ×100/1
+    <ul>Example: A gas thermometer is used to measure the temperature of a furnace. The thermometer indicate the ice point and steam point as 30mmHgnand 60mmHg respectively and at unknown temperature, it read 40mmHg. Find the unknown temperature</ul>
+    <ul>solution</ul>
+    <ul>pt=p∅-Po/P100-Po ×100/1</ul>
+    <ul>pt=40-30/60-30 ×100/1</ul>
+    <ul>pt=10/30 ×100/1</ul>
+    <ul>pt=100/3</ul>
+    <ul>pt=33.3⁰c</ul></li>
+  <li>(ii) Liquid in glass thermometer</li>
+  <li>(iii) Resistance Thermometer</li>
+  <li>Radiation thermometer</li>
+  <li>Thermo-eletric thermometer</li>
+  <li>Thermocouple</li></strong> </p>
+  <h3>Converting fahrenheit to Celsius </h3>
+  <p><strong>Convert 250⁰F to celsius scale.
+  <ul>solution</ul>
+  <ul>C/100=F-32/180</ul>
+  <ul>180C{F-32}=180⁰C</ul>
+  <ul>180C=100{250-32}</ul>
+  <ul>180C=100{220}</ul>
+  <ul>C=22000/180</ul>
+  <ul>=122.2⁰C</ul>
+  </strong></p>
+  
+  <button onclick="downloadNote()">Download Notes</button>
+</div>
+
+<script>
+function downloadNote(){
+  const text = `
+Speed, Velocity & Acceleration
+
+1. Definition of Speed: …
+2. Formula for Speed: …
+3. Definition of Velocity: …
+4. Acceleration: …
+5. Example: …
+  `;
+  const blob = new Blob([text], { type: 'text/plain' });
+  const link = document.createElement('a');
+  link.href = URL.createObjectURL(blob);
+  link.download = 'Physics-SS1-Speed.txt';
+  link.click();
+}
+</script>
+
+</body>
+</html>

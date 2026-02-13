@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Physics Notes - Linear Expansivity</title>
+<style>
+body { font-family: Arial; background:#f4f6f8; margin:0; padding:20px; }
+h1 { text-align:center; color:#023e8a; margin-bottom:20px; }
+.content { max-width:800px; margin:auto; background:#e3f2fd; padding:20px; border-radius:10px; }
+button { background-color:#0288d1; color:white; border:none; padding:10px 20px; margin-top:15px; border-radius:8px; cursor:pointer; font-weight:bold; transition:0.3s; }
+button:hover { background-color:#0277bd; }
+</style>
+</head>
+<body>
+
+<h1>Linear Expansivity</h1>
+
+<div class="content">
+  <p><strong>Linear expansion occurs in solid because of the rigidity and the intermolecular forces of attraction of the solid.When a solid is heated to a particular temperature, the molecules it contain absorb some kinetic energy, since the kinetic energy is the measure of velocity</strong> </p>
+  <p><strong>Linear expansivity of solid is defined as the increase in length per unit rise in temperature. It is denoted by a and measured in K-¹ or C-¹(SI unit)</strong> </p>
+  <p><strong>a=L2-L1/L1∆ø</strong> </p>
+  
+  <p><strong>Example:If a metal rod of length 50m expands when heated at a temperature change of 10k, find the change in length (linear expansivity of metal=1.5×10-⁸k-¹)
+  <ul>a=L2-L1/L1∆ø</ul>
+  <ul>∆L=L2-L1∆ø</ul>
+  <ul>∆L=L2-L1=1.5×10-⁸×10×50</ul>
+  <ul>∆Ø=L2-L1=750×10-⁸</ul>
+  <ul>∆ø=L2-L1=7.5×10-⁶m</ul>
+ <ul> .: Change in length is 7.5×10-⁶m</strong> </p>
+  
+  <button onclick="downloadNote()">Download Notes</button>
+</div>
+
+<script>
+function downloadNote(){
+  const text = `
+Linear expansivity
+
+1. Definition of Speed: …
+2. Formula for Speed: …
+3. Definition of Velocity: …
+4. Acceleration: …
+5. Example: …
+  `;
+  const blob = new Blob([text], { type: 'text/plain' });
+  const link = document.createElement('a');
+  link.href = URL.createObjectURL(blob);
+  link.download = 'Physics-SS1-Speed.txt';
+  link.click();
+}
+</script>
+
+</body>
+</html>

@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Physics ss1 chemistry </title>
+<style>
+body { font-family: Arial; background:#f4f6f8; margin:0; padding:20px; }
+h1 { text-align:center; color:#023e8a; margin-bottom:20px; }
+.content { max-width:800px; margin:auto; background:#e3f2fd; padding:20px; border-radius:10px; }
+button { background-color:#0288d1; color:white; border:none; padding:10px 20px; margin-top:15px; border-radius:8px; cursor:pointer; font-weight:bold; transition:0.3s; }
+button:hover { background-color:#0277bd; }
+</style>
+</head>
+<body>
+
+<h1>friction</h1>
+
+<div class="content">
+  <p><strong>When a body slide over the surface of another body, there is an opposing force acting opposite to the direction of motion.</strong><i>The opposite  force is called friction</i><strong>when a body is rolled on a rough  surface, it will come to an end within a short period of time, die to the friction on the rough surface/strong> </p>
+  <p><strong>Limiting force:when a body is placed over another, a force act between the surface in contact and this force is called </strong><i>limiting  force</i> </p>
+  <h3>Application of friction </h3>
+  <p><strong>
+    <li>The tyres of a motor car and a bicycle are made rough to increase friction</li>
+    <li>It is the friction between the belt and the pulley that help in the rotation of the various parts of the machine</li>
+    <li>When the ground becomes slippery after rain, it is made rough by spreading sand in order  not to caus slipping</li>
+    <li>Without friction, the brake of a motor car cannot work</li>
+    <li>Without friction between the feet and the ground,it will not be possible to walk without falling</li></strong></p>
+    <h3>Method of reducing friction </h3>
+  <p><strong>
+    <li>Streamling:Streamling is used to reduce friction due to the shape on an object which ensure that only a small surface area of the object is in head-on contact with the fluid during motion</li>
+    <li>Ball bearing:Shadt are fixed on ball bearing so that friction will be reduced because rolling friction is less than sliding friction.</li>
+    <li>Lubricating: Lubricants are viscous liquid or oil which are applied between two surface in contact. They help in overcoming or reducing friction</li>
+    <li>Polishing: Friction between two surface in contact can be reduced by polishing them</li>
+    <li>Banking:This is the method used in reducing sideways friction</li></strong></p>
+    <h3><strong>Disadvantage of Friction</strong></h3>
+    <p><strong><li>It reduce the efficiency of machine </li>
+    <li>It cause the heating of engines</li>
+    <li>It reduces motion</li>
+    <li>It causes wear and tear in machine</li></strong></p>
+    <h3>Type of solid Friction </h3>
+    <p><strong><li>Static or stationary friction</li>
+    <li>Kinetic,sliding or dynamic friction</li></strong></p>
+    <h4><strong>Stationary/static friction</strong></h4>
+    <p><strong>Static friction is the force that act to prevent two surface in contact from sliding. </strong></p>
+    <h4><strong>Formula for static or stationary friction </strong></h4>
+    <p><strong>
+      <li>u=Fm/mg</li>
+      <li>Fr=U mg</li>
+      <li>Fm=mg sin∅</li>
+      <li>R=w=mgcos∅</li>
+      <li>U=Fm/R=mgsin∅/mgcos∅=tan</li>
+      <li>U=Fr/mg</li>
+    </strong></p>
+    <p><strong>
+      <ul>Fm=moving Force </ul>
+      <ul>Fr=limiting frictional force</ul>
+      <ul>Fn=Force applied </ul>
+      <ul>R=normal reaction between surface</ul>
+      <ul>W=weight</ul>
+      <ul>U=coefficient of static/stationary friction </ul>
+    </strong></p>
+  <p><strong>Example:</strong> …</p>
+  <h4><strong>sliding, dynamic or  kinetic friction </strong></h4>
+ <p><strong>Sliding, dynamic or kinetic friction can be defined as the frictional force that exis between two surface in relative motion</strong></p>
+ <p><strong>U=Fm/mg</strong></p>
+ <p><strong>Fm×S=½mv²</strong></p>
+ <p><strong>Example:When a box of mads 45kg is given in an initial speed of 5m/s, it slide along a horizontal floor to a distance of 3m before coming to rest. What is the coefficient of the kinetic friction between the box and the floor (g=10m/s)</strong></p>
+ <p><strong>Solution </strong></p>
+ <p><strong>S=3m, m=45kg, v=5m/s<ul>Fm×S=½mv²</ul>
+ <ul>Fm×3=½×45×(5)²</ul>
+ <ul>3Fm=45×25/2</ul>
+ <ul>3fm=562.5</ul>
+ <ul>divide both side by 3</ul>
+ <ul>fm=187.5</ul>
+ <ul>U=Fm/mg</ul>
+ <ul>U=187.5/45×10</ul>
+ <ul>U=0.147</ul></strong></p>
+  
+  <button onclick="downloadNote()">Download Notes</button>
+</div>
+
+<script>
+function downloadNote(){
+  const text = `
+Speed, Velocity & Acceleration
+
+1. Definition of Speed: …
+2. Formula for Speed: …
+3. Definition of Velocity: …
+4. Acceleration: …
+5. Example: …
+  `;
+  const blob = new Blob([text], { type: 'text/plain' });
+  const link = document.createElement('a');
+  link.href = URL.createObjectURL(blob);
+  link.download = 'Physics-SS1-Speed.txt';
+  link.click();
+}
+</script>
+
+</body>
+</html>
