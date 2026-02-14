@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>circular motion</title>
+<style>
+body { font-family: Arial; background:#f4f6f8; margin:0; padding:20px; }
+h1 { text-align:center; color:#023e8a; margin-bottom:20px; }
+.content { max-width:800px; margin:auto; background:#e3f2fd; padding:20px; border-radius:10px; }
+button { background-color:#0288d1; color:white; border:none; padding:10px 20px; margin-top:15px; border-radius:8px; cursor:pointer; font-weight:bold; transition:0.3s; }
+button:hover { background-color:#0277bd; }
+</style>
+</head>
+<body>
+
+<h1>Circular motion</h1>
+
+<div class="content">
+  <p><strong>Circular motion is a motion on a circular path in which the speed of the body remais constant while it's direction continuously changes e.g</strong> …</p>
+  <p><strong><li>stone whirled in horizontal circle</li>
+  <li>Cloth ending in a spin drier</li>
+  <li>The earth moving round the sun</li>
+  <li>planet going round the sun</li></strong></p>
+  <h3>Angular velocity </h3>
+  <p><strong>Angular velocity is defined as the change of the angle per seconds, measure in rad/s</strong> </p>
+  <p><strong>Formula's for angular velocity:
+  <li>∅=wt</li>
+  <li>s=r∅</li>
+  <li>v=rw</li>
+  <li>T=2π/w</li>
+  <li>1/f</li></strong></p>
+  <p><strong>Centripetal force:When a stone is attached to a string and whirled round at constant speed in a horizontal circle, the stone moves with constant (same) speed but at different direction and acceleration directed towards the center of the circle due to tension in the string that produce a force</strong> </p>
+  <p><strong>The force required to keep thie stone moving in this circular path is called</strong><i> centripetal force</i></p>
+  <p><strong>Centripetal force=mv²/r OR mrw²</strong></p>
+  <p><strong>Example:An object of mass 4kg in a circle at radius 8m at uniform speed of 32m/s. calculate (a)the angular velocity (b)the centripetal force</strong> </p>
+  <p><strong>Solution </strong></p>
+  <p>Given that mass=4kg</p>
+  <p>radius=8m</p>
+  <p>v=32m/s</p>
+  <p><strong>(a)Angular velocity=w=v/r</strong></p>
+  <p><strong>32/8</strong></p>
+  <p><strong>Angular velocity=4rad/s</strong></p>
+  <p><strong>(b) centripetal force=mrw²</strong></p>
+  <p><stong>4×8×(4)²</stong></p>
+  <p><strong>=512N</strong></p>
+  <button onclick="downloadNote()">Download Notes</button>
+</div>
+
+<script>
+function downloadNote(){
+  const text = `
+Speed, Velocity & Acceleration
+
+1. Definition of Speed: …
+2. Formula for Speed: …
+3. Definition of Velocity: …
+4. Acceleration: …
+5. Example: …
+  `;
+  const blob = new Blob([text], { type: 'text/plain' });
+  const link = document.createElement('a');
+  link.href = URL.createObjectURL(blob);
+  link.download = 'Physics-SS1-Speed.txt';
+  link.click();
+}
+</script>
+
+</body>
+</html>
