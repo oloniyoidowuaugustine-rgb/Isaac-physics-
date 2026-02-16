@@ -1,0 +1,231 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Ultimate Physics Millionaire</title>
+
+<style>
+body{
+    font-family: Arial;
+    background: linear-gradient(to right,#000428,#004e92);
+    color:white;
+    text-align:center;
+    padding:20px;
+}
+
+.container{
+    max-width:700px;
+    margin:auto;
+    background:#111;
+    padding:20px;
+    border-radius:10px;
+}
+
+button{
+    width:95%;
+    padding:12px;
+    margin:8px;
+    border:none;
+    border-radius:5px;
+    font-size:16px;
+    cursor:pointer;
+}
+
+.option-btn{background:#1f4068;color:white;}
+.option-btn:hover{background:#162447;}
+
+.correct{background:green!important;}
+.wrong{background:red!important;}
+
+.lifeline{
+    background:orange;
+    font-weight:bold;
+}
+
+</style>
+</head>
+
+<body>
+
+<h1>Ultimate Physics Millionaire ⚡</h1>
+
+<div class="container">
+
+<p>Lives: <span id="lives">5</span> ❤️</p>
+<p>Score: <span id="score">0</span></p>
+<p>Time Left: <span id="timer">15</span> ⏳</p>
+
+<button class="lifeline" onclick="use5050()">🎯 50:50</button>
+<button class="lifeline" onclick="askAudience()">📊 Ask Audience</button>
+
+<h3 id="question">Question loads here</h3>
+<div id="options"></div>
+
+</div>
+
+<script>
+
+let lives = 5;
+let score = 0;
+let timer;
+let timeLeft = 15;
+let currentQuestion;
+let used5050 = false;
+let usedAudience = false;
+
+const correctSound = new Audio("https://www.soundjay.com/buttons/sounds/button-4.mp3");
+const wrongSound = new Audio("https://www.soundjay.com/buttons/sounds/button-10.mp3");
+
+const questions = [
+
+{question:"What is the relativistic energy equation?",options:["E=mc²","F=ma","V=IR","P=VI"],answer:"E=mc²"},
+{question:"Escape velocity of Earth?",options:["11.2 km/s","9.8 km/s","7.9 km/s","15 km/s"],answer:"11.2 km/s"},
+{question:"Who discovered electromagnetic induction?",options:["Faraday","Tesla","Bohr","Maxwell"],answer:"Faraday"},
+{question:"Planck constant approximately equals?",options:["6.63×10⁻³⁴","3×10⁸","9.8","1.6×10⁻¹⁹"],answer:"6.63×10⁻³⁴"},
+{question:"Dimensional formula of Force?",options:["MLT⁻²","ML²T⁻²","MT⁻¹","M⁰L⁰T⁰"],answer:"MLT⁻²"},
+{question:"Absolute zero in Celsius?",options:["-273°C","0°C","-100°C","-2730°C"],answer:"-273°C"},
+{question:"Who proposed Quantum Theory?",options:["Planck","Einstein","Bohr","Newton"],answer:"Planck"},
+{question:"Speed of light is?",options:["3×10⁸ m/s","3×10⁶","3×10⁷","3×10⁵"],answer:"3×10⁸ m/s"},
+{question:"SI unit of capacitance?",options:["Farad","Volt","Ohm","Coulomb"],answer:"Farad"},
+{question:"Heisenberg principle relates to?",options:["Uncertainty","Entropy","Energy","Power"],answer:"Uncertainty"},
+{question:"Bohr model explains?",options:["Atomic spectra","Relativity","Gravity","Magnetism"],answer:"Atomic spectra"},
+{question:"Entropy is associated with which law?",options:["2nd Law","1st Law","3rd Law","Zeroth Law"],answer:"2nd Law"},
+{question:"Who developed wave theory of light?",options:["Huygens","Newton","Einstein","Young"],answer:"Huygens"},
+{question:"Magnetic flux unit?",options:["Weber","Tesla","Henry","Gauss"],answer:"Weber"},
+{question:"Acceleration due to gravity on Earth?",options:["9.8 m/s²","8.9","10.8","7.8"],answer:"9.8 m/s²"}
+
+];
+
+function startTimer(){
+    timeLeft = 15;
+    document.getElementById("timer").textContent = timeLeft;
+
+    timer = setInterval(()=>{
+        timeLeft--;
+        document.getElementById("timer").textContent = timeLeft;
+
+        if(timeLeft<=0){
+            clearInterval(timer);
+            loseLife();
+            loadQuestion();
+        }
+    },1000);
+}
+
+function loadQuestion(){
+
+    if(lives<=0){
+        gameOver();
+        return;
+    }
+
+    clearInterval(timer);
+
+    currentQuestion = questions[Math.floor(Math.random()*questions.length)];
+
+    document.getElementById("question").textContent = currentQuestion.question;
+
+    const optionsDiv = document.getElementById("options");
+    optionsDiv.innerHTML="";
+
+    currentQuestion.options
+    .sort(()=>Math.random()-0.5)
+    .forEach(option=>{
+        const btn = document.createElement("button");
+        btn.textContent = option;
+        btn.classList.add("option-btn");
+        btn.onclick = ()=>checkAnswer(btn,option);
+        optionsDiv.appendChild(btn);
+    });
+
+    startTimer();
+}
+
+function checkAnswer(button,selected){
+
+    clearInterval(timer);
+
+    if(selected===currentQuestion.answer){
+        button.classList.add("correct");
+        correctSound.play();
+        score+=1000;
+        document.getElementById("score").textContent=score;
+    }else{
+        button.classList.add("wrong");
+        wrongSound.play();
+        loseLife();
+    }
+
+    setTimeout(loadQuestion,1500);
+}
+
+function loseLife(){
+    lives--;
+    document.getElementById("lives").textContent=lives;
+}
+
+function gameOver(){
+    document.getElementById("question").textContent="Game Over!";
+    document.getElementById("options").innerHTML=
+    `
+    <button onclick="watchAd()">📺 Watch Ad to Continue</button>
+    <button onclick="restartGame()">Restart Game</button>
+    `;
+}
+
+function watchAd(){
+    alert("Ad Watched! You gained 2 lives!");
+    lives=2;
+    document.getElementById("lives").textContent=lives;
+    loadQuestion();
+}
+
+function restartGame(){
+    lives=5;
+    score=0;
+    used5050=false;
+    usedAudience=false;
+    document.getElementById("lives").textContent=lives;
+    document.getElementById("score").textContent=score;
+    loadQuestion();
+}
+
+function use5050(){
+
+    if(used5050){
+        alert("50:50 already used!");
+        return;
+    }
+
+    used5050=true;
+
+    const buttons=Array.from(document.querySelectorAll(".option-btn"));
+
+    let wrongOptions=buttons.filter(btn=>btn.textContent!==currentQuestion.answer);
+
+    wrongOptions.sort(()=>Math.random()-0.5);
+
+    wrongOptions.slice(0,2).forEach(btn=>btn.style.display="none");
+}
+
+function askAudience(){
+
+    if(usedAudience){
+        alert("Audience already used!");
+        return;
+    }
+
+    usedAudience=true;
+
+    let correctPercent=Math.floor(Math.random()*30)+50;
+    let remaining=100-correctPercent;
+
+    alert("Audience Vote:\nCorrect Answer: "+correctPercent+"%\nOthers Share: "+remaining+"%");
+}
+
+loadQuestion();
+
+</script>
+
+</body>
+</html>
